@@ -1,2 +1,2 @@
-# starwarsAPI
+# Starwars wiki
 API ABOUT STARWARS
