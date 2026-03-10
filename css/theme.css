@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap');
+
+:root {
+  --ink: #eaf4ff;
+  --muted: #9bb2c7;
+  --accent: #ffd24d;
+  --accent-strong: #ffae00;
+  --panel: rgba(8, 17, 30, 0.82);
+  --line: rgba(122, 182, 255, 0.35);
+  --nav-about: #83a9ff;
+  --nav-forum: #db87ff;
+  --nav-wiki: #ffea86;
+  --nav-jedi: #92ff8c;
+  --nav-sith: #ff8f8f;
+  --nav-character: #ffbe5c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #04070d;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  background:
+    radial-gradient(1200px 700px at 10% 10%, rgba(9, 52, 117, 0.35), transparent),
+    radial-gradient(900px 500px at 90% 90%, rgba(255, 153, 0, 0.2), transparent),
+    #04070d;
+  background-attachment: fixed;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+  animation: glowing 2s infinite alternate ease-in-out;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.2) 1px, transparent 0);
+  background-size: 3px 3px;
+  z-index: 1;
+}
+
+header,
+main,
+footer,
+.saber-anchor {
+  position: relative;
+  z-index: 2;
+}
+
+.site-nav,
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.site-nav a,
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 15, 30, 0.68);
+  padding: 0.48rem 0.78rem;
+  border-radius: 999px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.about { color: var(--nav-about); }
+.forum { color: var(--nav-forum); }
+.wiki { color: var(--nav-wiki); }
+.jedi { color: var(--nav-jedi); }
+.sith { color: var(--nav-sith); }
+.character { color: var(--nav-character); }
+
+.site-nav a:hover,
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
+
+.about:hover {
+  border-color: rgba(131, 169, 255, 0.7);
+  box-shadow: 0 0 18px rgba(131, 169, 255, 0.35);
+}
+
+.forum:hover {
+  border-color: rgba(219, 135, 255, 0.7);
+  box-shadow: 0 0 18px rgba(219, 135, 255, 0.35);
+}
+
+.wiki:hover {
+  border-color: rgba(255, 234, 134, 0.75);
+  box-shadow: 0 0 18px rgba(255, 234, 134, 0.35);
+}
+
+.jedi:hover {
+  border-color: rgba(146, 255, 140, 0.75);
+  box-shadow: 0 0 18px rgba(146, 255, 140, 0.35);
+}
+
+.sith:hover {
+  border-color: rgba(255, 143, 143, 0.75);
+  box-shadow: 0 0 18px rgba(255, 143, 143, 0.35);
+}
+
+.character:hover {
+  border-color: rgba(255, 190, 92, 0.75);
+  box-shadow: 0 0 18px rgba(255, 190, 92, 0.35);
+}
+
+.site-nav a.active {
+  border-color: rgba(255, 210, 77, 0.55);
+  box-shadow: 0 0 22px rgba(255, 174, 0, 0.26);
+}
+
+@keyframes glowing {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.35);
+  }
+}

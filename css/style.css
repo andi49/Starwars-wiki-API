@@ -13,38 +13,9 @@
     font-family: Roboto
 }
 body{
-    background-color: rgb(0, 0, 0);
-    color: rgb(226, 255, 123);
+    background-color: transparent;
+    color: var(--ink);
 
-}
-#stars{
-    z-index: -2;
-    position: absolute;
-}
-
-.star{
-    position: relative;
-    width: 3px;
-    height: 3px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.8);
-    animation: glowing 10s infinite alternate ease-in-out;
-}
-    @keyframes glowing{
-    0%{
-    opacity: 0,1;
-    transform: scale(0.2);
-    box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.3);
-    }
-    50%{
-
-    }
-    100%{
-    opacity: 0.8;
-    transform: scale(1.5);
-    box-shadow: 0 0 30px 8px rgba(255, 255, 255, 0,8);
-    }
 }
 
 .lightmode{
@@ -60,21 +31,21 @@ body{
 /* NAVBAR */
 
 .navbar{
-    background-color: black;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.nav-links{
-     background-color: black;
-    display:flex;
-    gap:30px;
+header {
+    margin-top: 1rem;
 }
 
-.nav-links a{
-     background-color: black;
+.nav-links{
+     background-color: transparent;
+    display:flex;
+    gap:30px;
 }
 
 
@@ -90,80 +61,12 @@ body{
     width: 40px;
 }
 
-.contact{
-    color: var(--navbar-colorone);
-}
-
-.contact:hover{
-     background-color:var(--navbar-colorone) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colorone);
-}
-
-.about{
-     color: var(--navbar-colortwo);
-}
-
-.about:hover{
-     background-color:var(--navbar-colortwo) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colortwo);
-}
-
-.wiki{
-    color: var(--navbar-colorthree);
-}
-
-.wiki:hover{
-     background-color:var(--navbar-colorthree) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colorthree);
-}
-
-.jedi{
-    color: var(--navbar-colorfour);
-}
-
-.jedi:hover{
-     background-color:var(--navbar-colorfour) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colorfour);
-}
-
-.sith{
-    color: var(--navbar-colorfive);
-}
-
-.sith:hover{
-    background-color:var(--navbar-colorfive) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colorfive);
-}
-
-.character{
-    color: var(--navbar-colorsix);
-}
-
-.character:hover{
-    background-color:var(--navbar-colorsix);
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px var(--navbar-colorsix);
-}
-
-nav a{
-    background-color: none;
-    padding:6px;
-    color: inherit;
-    text-decoration: none;
-}
 
 @media (max-width:768px){
+
+header {
+    margin-top: 0.75rem;
+}
 
 .navbar{
     justify-content:space-between;
@@ -196,43 +99,6 @@ nav a{
 
 }   
 
-nav{
- gap:20px;
- justify-self: center;
- margin-top: 20px;
-}
-nav > a:nth-child(1){
-    color: #02046e;
-}
-nav > a:nth-child(2){
-    color: #5f0c5f;
-    border-left: 3px solid rgb(46, 46, 46);
-}
-nav > a:nth-child(3){
-    border-left: 3px solid rgb(46, 46, 46);
-    border-right:3px solid rgb(46, 46, 46);
-    font-size: x-large;
-    color: #efff5f;
-}
-nav > a:nth-child(4){
-    color: var(--navbar-colorfive);
-    border-right: 3px solid rgb(46, 46, 46);
-}
-nav > a:nth-child(5){
-    color: #8b0303;
-}
-a{
-    background-color: none;
-    padding:6px;
-    color: inherit;
-    text-decoration: none;
-}
-a:hover{
-    background-color:rgb(47, 249, 36) ;
-    color: black;
-    border-radius: 20px;
-    box-shadow: 0px 1px 50px rgb(47, 249, 36);
-}
 .scroll-text{
     justify-content: center;
     justify-self: center;

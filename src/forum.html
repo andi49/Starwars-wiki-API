@@ -1,27 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/mailbox.css">
     <title>STARWARS WIKI/FORUM</title>
-</head>
-<body>
-    <section class="computer">
-      <div class="mailbox">
-        <div class="mailbox-tittle"><h1>MAILBOX</h1></div>
-    
+    <script src="../javascript/starbackground.js" defer></script>
+  </head>
+  <body>
+    <div id="stars"></div>
+    <div class="noise"></div>
 
-        <input class="input-field" type="text" placeholder="To" required>
-        <input class="input-field" type="text" placeholder="Subject" required>
+    <main class="page">
+      <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="about.html" class="about">About us</a>
+          <a href="forum.html" class="forum active">Forum</a>
+          <a href="../index.html" class="wiki">StarWars Wiki</a>
+          <a href="jedi.html" class="jedi">Jedi</a>
+          <a href="sith.html" class="sith">Sith</a>
+          <a href="character-of-the-day.html" class="character">Character</a>
+        </nav>
+      </header>
 
-        <textarea class="input-field text-area" required></textarea>
+      <section class="computer">
+        <div class="mailbox">
+          <div class="mailbox-tittle"><h1>MAILBOX</h1></div>
 
-        <p class="fee">FEE $100</p>
+          <input class="input-field" type="text" placeholder="To" required>
+          <input class="input-field" type="text" placeholder="Subject" required>
 
-        <button class="send-btn">Send</button>
-      </div>
-    </section>
-</body>
+          <textarea class="input-field text-area" required></textarea>
+
+          <p class="fee">FEE $100</p>
+
+          <button class="send-btn">Send</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

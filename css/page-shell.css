@@ -1,0 +1,35 @@
+.page {
+  width: min(920px, 92vw);
+  margin: 0 auto;
+  padding: 2.4rem 0 3rem;
+}
+
+.site-header {
+  margin-bottom: 1rem;
+}
+
+.shell-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(165deg, var(--panel), rgba(4, 9, 18, 0.9));
+  padding: 1.2rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.shell-card h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  margin-bottom: 0.6rem;
+}
+
+.shell-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding-top: 1.2rem;
+  }
+}
