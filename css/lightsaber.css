@@ -17,6 +17,22 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+background: #CE5937;
+background: -moz-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
+background: -webkit-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
+background: linear-gradient(to right, #CE5937 0%, #954028 50%, #CE5937 100%);
+  z-index: 2;
+}
+#sithlightsaber{
+  position: absolute;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 background: #24CE24;
 background: -moz-linear-gradient(left, #24CE24 0%, #1FB11F 44%, #24CE24 100%);
 background: -webkit-linear-gradient(left, #24CE24 0%, #1FB11F 44%, #24CE24 100%);

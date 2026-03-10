@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150)
 
     if (scrollAmount > 5) {
-      lightsaber.style.boxShadow = '-1px -6px 41px 14px #00FF28'
+      lightsaber.style.boxShadow = '-1px -6px 41px 14px #ff0000'
+      // lightsaber.style.boxShadow = '-1px -6px 41px 14px #00FF28'
     } else {
       lightsaber.style.boxShadow = ''
     }
