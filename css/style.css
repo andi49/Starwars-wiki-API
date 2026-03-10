@@ -5,6 +5,7 @@
      --navbar-colorthree: #FFE81F;
      --navbar-colorfour: #2FF924;
      --navbar-colorfive: #BC1E22;
+    --navbar-colorsix: #ff9f1a;
 }
 *{
     margin: 0;
@@ -142,6 +143,17 @@ body{
     color: black;
     border-radius: 20px;
     box-shadow: 0px 1px 50px var(--navbar-colorfive);
+}
+
+.character{
+    color: var(--navbar-colorsix);
+}
+
+.character:hover{
+    background-color:var(--navbar-colorsix);
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0px 1px 50px var(--navbar-colorsix);
 }
 
 nav a{

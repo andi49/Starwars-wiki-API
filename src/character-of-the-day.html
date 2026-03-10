@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/character-of-the-day.css" />
+    <script src="../javascript/starbackground.js" defer></script>
+    <script src="../javascript/character-of-the-day.js" defer></script>
+    <title>StarWars Wiki | Character of the Day</title>
+  </head>
+  <body>
+    <div id="stars"></div>
+    <div class="noise"></div>
+    <main class="page">
+        <header class="site-header">
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="about.html">About us</a>
+                <a href="forum.html">Forum</a>
+                <a href="../index.html">StarWars Wiki</a>
+                <a href="jedi.html">Jedi</a>
+                <a href="Sith.html">Sith</a>
+                <a href="character-of-the-day.html" class="active">Character</a>
+            </nav>
+        </header>
+
+        <section class="card" aria-live="polite">
+            <p id="status" class="status">Loading from the Holonet...</p>
+            <img
+            id="character-image"
+            class="character-image"
+            src=""
+            alt=""
+            hidden
+        />
+
+        <div class="card-content" hidden id="character-content">
+            <h2 id="character-name">Unknown Character</h2>
+            <p id="character-description"></p>
+        </div>
+
+        <div class="actions">
+            <button id="refresh-button" type="button">New Character</button>
+        </div>
+        </section>
+    </main>
+
+
+  </body>
+</html>
