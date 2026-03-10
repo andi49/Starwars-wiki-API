@@ -76,8 +76,6 @@ body{
      background-color: black;
 }
 
-
-
 .menu-toggle{
     display: none;
     background: none;
@@ -166,7 +164,7 @@ nav a{
     left:0;
     width:100%;
     text-align:center;
-     gap:5px;
+    gap:5px;
    
 }
 
@@ -231,4 +229,25 @@ p{
 footer{
     justify-content: center;
     justify-self: center;
+}
+
+/* FOOTER */
+
+.imges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 150px;
+}
+.listItems{
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    gap:20px; 
+    font-size: 40px;
+}
+
+.listItems li{
+    list-style:none;
 }
