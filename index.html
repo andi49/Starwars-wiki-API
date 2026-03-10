@@ -19,13 +19,22 @@
         <div id="lightsaber"></div>
       </div>
       <header>
+
         <nav>
-          <a href="src/about.html">About us</a>
+          <div class="navbar">
+            <button class="menu-toggle" id="menuToggle">
+         <img src="img/starfighter.png" alt="menu" class="imgStarfighter">
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="src/about.html" class="about">About us</a>
           <a href="src/forum.html">Forum</a>
-          <a href="index.html">StarWars Wiki</a>
-          <a href="src/jedi.html">Jedi</a>
-          <a href="src/Sith.html">Stih</a>
+          <a href="index.html" class="wiki">StarWars Wiki</a>
+          <a href="src/jedi.html" class="jedi">Jedi</a>
+          <a href="src/Sith.html" class="sith">Stih</a>
+          </div>
+          </div>
         </nav>
+
       </header>
       <main>
         <div class="wrapper">
@@ -221,4 +230,5 @@
       </footer>
     </div>
   </body>
+  <script type="module" src="javascript/navbar.js"></script>
 </html>
