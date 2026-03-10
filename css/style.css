@@ -1,8 +1,11 @@
 *{
     margin: 0;
     padding: 0;    
-    /* background-color: rgb(85, 84, 84); */
     color: rgb(47, 249, 36);
+}
+body{
+    background-color: rgb(85, 84, 84);
+    
 }
 .lightmode{
     background-color: antiquewhite;
