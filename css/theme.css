@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 :root {
   --ink: #eaf4ff;
@@ -91,12 +92,36 @@ footer,
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.about { color: var(--nav-about); }
-.forum { color: var(--nav-forum); }
-.wiki { color: var(--nav-wiki); }
-.jedi { color: var(--nav-jedi); }
-.sith { color: var(--nav-sith); }
-.character { color: var(--nav-character); }
+.about { color: var(--nav-about);
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal; 
+}
+.forum { color: var(--nav-forum);  
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.wiki { color: var(--nav-wiki);
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal; 
+}
+.jedi { color: var(--nav-jedi);
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal; 
+}
+.sith { color: var(--nav-sith);
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.character { color: var(--nav-character);
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal;  
+}
 
 .site-nav a:hover,
 .nav-links a:hover {
@@ -133,9 +158,35 @@ footer,
   box-shadow: 0 0 18px rgba(255, 190, 92, 0.35);
 }
 
-.site-nav a.active {
+.site-nav .character.active {
   border-color: rgba(255, 210, 77, 0.55);
   box-shadow: 0 0 22px rgba(255, 174, 0, 0.26);
+}
+
+.site-nav .about.active {
+  border-color: rgba(131, 169, 255, 0.7);
+  box-shadow: 0 0 18px rgba(131, 169, 255, 0.35);
+}
+
+.site-nav .forum.active {
+  border-color: rgba(219, 135, 255, 0.7);
+  box-shadow: 0 0 18px rgba(219, 135, 255, 0.35);
+}
+
+
+.site-nav .wiki.active {
+  border-color: rgba(255, 234, 134, 0.75);
+  box-shadow: 0 0 18px rgba(255, 234, 134, 0.35);
+}
+
+.site-nav .jedi.active {
+  border-color: rgba(146, 255, 140, 0.75);
+  box-shadow: 0 0 18px rgba(146, 255, 140, 0.35);
+}
+
+.site-nav .sith.active {
+  border-color: rgba(255, 143, 143, 0.75);
+  box-shadow: 0 0 18px rgba(255, 143, 143, 0.35);
 }
 
 @keyframes glowing {
@@ -147,4 +198,63 @@ footer,
     opacity: 0.9;
     transform: scale(1.35);
   }
+}
+
+
+/* FOOTER */
+
+.footerWrapper{
+    justify-content: center;
+    justify-self: center;
+}
+
+
+.footerMarks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 150px;
+}
+
+.socialLinkWrapper{
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    gap:20px; 
+    font-size: 25px;
+}
+
+.internalLinkWrapper{
+  padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center; 
+    align-items:center;
+    gap:20px; 
+    font-size:1rem;
+}
+
+
+.internalLinkWrapper  a, .socialLinkWrapper  a{
+    text-decoration: none;
+}
+.internalLinkWrapper li , .socialLinkWrapper li {
+    list-style:none;
+}
+
+.fa-tiktok{
+    color: white;
+}
+
+.fa-instagram{
+    color: #833ab4;
+}
+
+.fa-facebook{
+    color: blue;
+}
+
+.fa-reddit{
+    color: orangered;
 }
