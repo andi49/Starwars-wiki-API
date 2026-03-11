@@ -60,7 +60,7 @@ async function fetchStarWarsData() {
                 charDesEl.innerText = `Description: ${description}`
              
 
-                 jediDiv.append(charNameEl,charDesEl,charAffiEl)
+                 jediDiv.append(charNameEl,charDesEl)
                  jediCard.append(jediDiv)
                 
             });
