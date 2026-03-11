@@ -18,9 +18,9 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 background: #CE5937;
-background: -moz-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
+/* background: -moz-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
 background: -webkit-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
-background: linear-gradient(to right, #CE5937 0%, #954028 50%, #CE5937 100%);
+background: linear-gradient(to right, #CE5937 0%, #954028 50%, #CE5937 100%); */
   z-index: 2;
 }
 #sithlightsaber{
