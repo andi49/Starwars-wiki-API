@@ -1,43 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/page-shell.css" />
-    <link rel="stylesheet" href="../css/lightsaber.css" />
 
-    <script src="../javascript/lightsaber.js" defer></script>
-    <script src="../javascript/starbackground.js" defer></script>
-    <title>StarWars Wiki | Jedi</title>
-  </head>
-  <body>
-    <div id="stars"></div>
-    <div class="noise"></div>
-    <div id="saberdiv" class="saber-anchor">
-      <div id="lightsaber"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/page-shell.css" />
+  <link rel="stylesheet" href="../css/lightsaber.css" />
+  <script src="../javascript/lightsaber.js" defer></script>
+  <script src="../javascript/starbackground.js" defer></script>
+  <title>StarWars Wiki | Jedi</title>
+</head>
+
+<body>
+  <div id="stars"></div>
+  <div class="noise"></div>
+  <div id="saberdiv" class="saber-anchor">
+    <div id="lightsaber"></div>
+  </div>
+  <main class="page">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="about.html" class="about">About us</a>
+        <a href="forum.html" class="forum">Forum</a>
+        <a href="../index.html" class="wiki">StarWars Wiki</a>
+        <a href="jedi.html" class="jedi active">Jedi</a>
+        <a href="Sith.html" class="sith">Sith</a>
+        <a href="character-of-the-day.html" class="character">Character</a>
+      </nav>
+    </header>
+
+    <section class="shell-card">
+      <h1>Jedi Records</h1>
+      <p>
+        Placeholder shell is active. Team can now add lore sections, filters,
+        and character cards without rebuilding the page structure.
+      </p>
+    </section>
+  </main>
+  <script src="../javascript/characters.js"></script>
+  <footer class="footerWrapper">
+    <div class="footerMarks">
+      <img src="img/Jedi-order.png" alt="">
+      <img src="img/Imperial-mark.png" alt="">
     </div>
-    <main class="page">
-      <header class="site-header">
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="about.html" class="about">About us</a>
-          <a href="forum.html" class="forum">Forum</a>
-          <a href="../index.html" class="wiki">StarWars Wiki</a>
-          <a href="jedi.html" class="jedi active">Jedi</a>
-          <a href="Sith.html" class="sith">Sith</a>
-          <a href="character-of-the-day.html" class="character">Character</a>
-        </nav>
-      </header>
+    <ul class="internalLinkWrapper">
+      <li> <a href="src/about.html" class="about">About us</a></li>
+      <li> <a href="src/forum.html" class="forum">Forum</a></li>
+      <li> <a href="src/apilinks.html" class="character">Api list</a></li>
+    </ul>
+    <ul class="socialLinkWrapper">
+      <li><i class="fa-brands fa-tiktok"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+      <li><i class="fa-brands fa-facebook"></i></li>
+      <li><i class="fa-brands fa-reddit"></i></li>
+    </ul>
+  </footer>
+</body>
 
-      <section class="shell-card">
-        <h1>Jedi Records</h1>
-        <p>
-          Placeholder shell is active. Team can now add lore sections, filters,
-          and character cards without rebuilding the page structure.
-        </p>
-      </section>
-    </main>
-      <script src="../javascript/characters.js"></script>
-  </body>
 </html>
