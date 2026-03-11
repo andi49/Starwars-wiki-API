@@ -97,10 +97,14 @@ header {
    
     padding: 10px 0 10px 0;
     display:flex;
+<<<<<<< Updated upstream
     width: 100px;
     gap: 10px;
    
     
+=======
+
+>>>>>>> Stashed changes
 }
 
 .menu-toggle{
@@ -116,5 +120,54 @@ header {
 p{
     margin-bottom: 20px;
 }
+/*content*/
+#contentwrapper{
+    display: grid;
+    grid-template-columns: 50px 50px [content-start] 1fr[content-mid] 1fr [content-end] 50px 50px;
+    color: #cfe9ff;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+#contentwrapper a{
+    color: inherit;
+    text-decoration: none;
+}
 
+#contentwrapper img:hover{
+    scale:1.01;
+}
+.leftcontent, .rightcontent{
+    background: linear-gradient(#0f2438, #050b15);
+}
+.leftcontent p, .rightcontent p{
+    padding: 8px;
+}
+.leftcontent{
+    grid-column: content-start;
+    width: 100%;
+    border:8px solid #1a3a55;
+    border-radius: 20px 0px 0px 20px;
+    border-right: none;
+    justify-items: center;
+}
+
+.leftcontent img{
+    padding-left: 10px;
+    width: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.rightcontent{
+    grid-column: content-mid;
+    width: 100%;
+    border:8px solid #1a3a55;
+    border-radius: 0px 20px 20px 0px;
+    border-left: none;
+    justify-items: center;
+}
+.rightcontent img{
+    padding-right: 10px;
+    width:100%;
+    border-radius: 0px 20px 20px 0px;
+}
 
