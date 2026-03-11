@@ -50,12 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
     lightsaber.style.height = `${baseHeight + scrollVh}vh`
   }
 
-  // Let the blade extend slightly when the page first loads.
-  // lightsaber.style.height = '0vh'
-  // lightsaber.style.transition = 'height 450ms ease-out, box-shadow 200ms ease-out'
-  // requestAnimationFrame(() => {
-  //   lightsaber.style.height = `${baseHeight}vh`
-  // })
-
   window.addEventListener('scroll', updateLightsaberHeight)
 })
