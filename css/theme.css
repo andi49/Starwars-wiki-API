@@ -71,17 +71,22 @@ body {
   z-index: 1;
 }
 
+
+
 header,
 main,
 footer,
 .saber-anchor {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
+
+
 
 /* NAVBAR */
 .site-nav,
 .nav-links {
+   z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -98,12 +103,17 @@ footer,
     display: block;
   }
 
+  nav{
+    z-index: 10;
+  }
+
   .site-nav {
     display: none;
-  
+    z-index: 100;
   }
 
   .site-nav.active {
+    z-index: 10000;
    display: flex;
   flex-direction: column;
   position: absolute;
@@ -112,7 +122,7 @@ footer,
   width: 150px;  
   text-align: center;
   gap: 5px;
-background:
+  background:
     radial-gradient(1200px 700px at 10% 10%, rgba(9, 52, 117, 0.35), transparent),
     radial-gradient(900px 500px at 90% 90%, rgba(255, 153, 0, 0.2), transparent),
     #04070d;
