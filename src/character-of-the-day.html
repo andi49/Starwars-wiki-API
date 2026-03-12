@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/character-of-the-day.css" />
     <link rel="stylesheet" href="../css/lightsaber.css" />
+    <script src="https://kit.fontawesome.com/493314404e.js" crossorigin="anonymous"></script>
     <script src="../javascript/lightsaber.js" defer></script>
     <script src="../javascript/starbackground.js" defer></script>
     <script src="../javascript/character-of-the-day.js" defer></script>
@@ -21,17 +22,17 @@
     </div>
 
     <main class="page">
-      <header class="site-header">
-           <button class="menu-toggle">
+       <header class="site-header">
+          <button class="menu-toggle">
             <img src="/img/starfighter.png" alt="" class="imgStarfighter">
           </button>
         <nav class="site-nav" aria-label="Main navigation">
           <a href="about.html" class="about">About us</a>
-          <a href="forum.html" class="forum">Forum</a>
-          <a href="../index.html" class="wiki">StarWars Wiki</a>
-          <a href="jedi.html" class="jedi">Jedi</a>
-          <a href="Sith.html" class="sith">Sith</a>
-          <a href="character-of-the-day.html" class="character active">Character</a>
+          <a href="/src/forum.html" class="forum">Forum</a>
+          <a href="index.html" class="wiki active">StarWars Wiki</a>
+          <a href="/src/jedi.html" class="jedi">Jedi</a>
+          <a href="/src/sith.html" class="sith">Sith</a>
+          <a href="/src/character-of-the-day.html" class="character">Character</a>
         </nav>
       </header>
 
@@ -51,7 +52,7 @@
         </div>
 
         <div class="actions">
-          <button id="refresh-button" type="button">New Character</button>
+          <button id="refresh-button" type="button" class="newCharacter">New Character</button>
         </div>
       </section>
     </main>
@@ -70,5 +71,5 @@
         <p class="footerMeta">Galactic Archive // 2026</p>
       </footer>
   </body>
-    <!-- <script type="module" src="../javascript/navbar.js"></script> -->
+    <script type="module" src="../javascript/navbar.js"></script>
 </html>

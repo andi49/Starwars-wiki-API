@@ -14,6 +14,7 @@
 }
 
 .card {
+  margin-top: 50px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: linear-gradient(165deg, var(--panel), rgba(4, 9, 18, 0.9));
@@ -57,7 +58,7 @@
   justify-content: flex-end;
 }
 
-button {
+.newCharacter {
   appearance: none;
   border: 1px solid rgba(255, 210, 77, 0.5);
   background: linear-gradient(180deg, #ffde7f, #ffbf2f);
@@ -73,12 +74,12 @@ button {
     box-shadow 180ms ease;
 }
 
-button:hover {
+.newCharacter:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 25px rgba(255, 174, 0, 0.35);
 }
 
-button:disabled {
+.newCharacter:disabled {
   opacity: 0.65;
   cursor: not-allowed;
 }
