@@ -69,6 +69,12 @@ function endVideo() {
         skipBtn = null;
     }
     
+    // Remove permission message if it exists
+    const permissionMsg = document.querySelector(".permission-message");
+    if (permissionMsg) {
+        permissionMsg.remove();
+    }
+    
     // After animation completes, hide video and show content
     setTimeout(() => {
         video.classList.remove("showIntro");
