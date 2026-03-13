@@ -43,10 +43,14 @@ function createSkipButton() {
 function showPermissionMessage() {
     const message = document.createElement("div");
     message.className = "permission-message";
-    message.innerHTML = "Click the video to enable audio and start playback";
+    message.innerHTML = `
+        <p>Enable audio to play intro</p>
+        <button class="permission-play-btn">PLAY</button>
+    `;
     document.body.appendChild(message);
     
-    video.addEventListener("click", () => {
+    const playBtn = message.querySelector(".permission-play-btn");
+    playBtn.addEventListener("click", () => {
         message.remove();
         video.play();
     }, { once: true });
@@ -56,26 +60,33 @@ function showPermissionMessage() {
 function endVideo() {
     console.log('Ending video, showing about page');
     
-    video.classList.remove("showIntro");
-    video.classList.add("hideIntro");
+    // Play slide out animation
+    video.classList.add("slideOut");
     
-    pageContent.classList.remove("hideContent");
-    pageContent.classList.add("showContent");
-    
-    // Show lightsaber again after video
-    if (lightsaber) {
-        lightsaber.style.display = "";
-    }
-    
-    // Remove skip button
+    // Remove skip button immediately
     if (skipBtn) {
         skipBtn.remove();
         skipBtn = null;
     }
     
-    // Stop video
-    video.pause();
-    video.currentTime = 0;
+    // After animation completes, hide video and show content
+    setTimeout(() => {
+        video.classList.remove("showIntro");
+        video.classList.add("hideIntro");
+        video.classList.remove("slideOut");
+        
+        pageContent.classList.remove("hideContent");
+        pageContent.classList.add("showContent");
+        
+        // Show lightsaber again after video
+        if (lightsaber) {
+            lightsaber.style.display = "";
+        }
+        
+        // Stop video
+        video.pause();
+        video.currentTime = 0;
+    }, 800); // Match animation duration
 }
 
 // When video ends, show the about page content
