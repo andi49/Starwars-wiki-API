@@ -1,5 +1,5 @@
 const API_BASE =
-  "https://starwars-databank-server.onrender.com/api/v1/characters?page=2&limit=total";
+  "https://starwars-databank-server.onrender.com/api/v1/characters";
 
 const statusEl = document.getElementById("status");
 const imageEl = document.getElementById("character-image");
