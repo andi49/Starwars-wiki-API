@@ -83,6 +83,60 @@ Fokus har legat på:
 - responsiv design  
 - bra användarupplevelse  
 
+### Typografi (fonter)
+
+Projektet använder flera fonter beroende på komponent:
+
+- **Exo 2**: grundfont för body/brödtext (global temabassida).
+- **Italiana**: används på navigationslänkar (About, Forum, Wiki, Jedi, Sith, Character).
+- **Orbitron**: rubriker, hero-titlar, knappar och labels med sci-fi uttryck.
+- **Roboto**: används i startsidans/forumets layoutfil som fallback för generell text.
+- **Gill Sans**: används i forum/mailbox-formulär och popup-meddelanden.
+- **Space Mono**: används i medlemslistor på About-sidan.
+
+Google Fonts laddas via CSS-importer i `theme.css` och `style.css`.
+
+### Färgpalett
+
+Kärnpaletten bygger på mörka blå/svarta bakgrunder med ljus text och neonaccenter:
+
+- **Bakgrund mörk**: `#04070d`
+- **Primär text**: `#eaf4ff`
+- **Dämpad text**: `#9bb2c7`
+- **Accent guld**: `#ffd24d` / `#FFD700`
+- **Accent blå**: `#2aa4ff`
+- **Sith-röd accent**: `#FF6B6B`
+- **Ljus paneltext**: `#cfe9ff`
+
+Navigationsfärger per länk:
+
+- About: `#83a9ff`
+- Forum: `#db87ff`
+- Wiki: `#ffea86`
+- Jedi: `#92ff8c`
+- Sith: `#ff8f8f`
+- Character: `#ffbe5c`
+
+### Externa länkar och resurser
+
+- **Font Awesome-kit** för socialikoner och ikoner:
+	- `https://kit.fontawesome.com/493314404e.js`
+- **Datakälla (API) i JavaScript-kod**:
+	- `https://starwars-databank-server.onrender.com/api/v1/characters`
+	- används även med query-parametrar på Jedi/Sith-sidor.
+- **Google Fonts**:
+	- Orbitron, Exo 2, Italiana och Roboto.
+
+Notering: Footer visar sociala ikoner visuellt, men de är för närvarande inte klickbara externa länkar.
+
+### Var designen används
+
+- **index.html**: `style.css` + `theme.css` + `lightsaber.css` + `mailbox.css`
+- **about.html**: `theme.css` + `page-shell.css` + `about.css`
+- **forum.html**: `theme.css` + `style.css` + `mailbox.css`
+- **jedi.html / Sith.html**: `theme.css` + `page-shell.css` + `jedi.css`
+- **character-of-the-day.html**: `theme.css` + `character-of-the-day.css`
+
 ---
 
 # 🛠 Tekniker
