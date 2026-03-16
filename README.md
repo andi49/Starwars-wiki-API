@@ -19,14 +19,11 @@ Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-fi
 
 ### Gruppmedlemmar
 
-- Andreas Pavel 🚩 (Projektledare)
-- Charlie
-- Isak
-- David
-- Syed Muhammad
-- Deaa
-- Salma
-
+- Andreas Pavel 🚩 (Projektledare/Fronted)
+- Charlie (UX/Desig)
+- Isak (API/Frontend)
+- David (Frontend)
+- Salma (Frontend)
 ---
 
 # 🔗 API
