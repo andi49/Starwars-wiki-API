@@ -19,7 +19,7 @@ Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-fi
 
 ### Gruppmedlemmar
 
-- Andreas Pavel 🚩 (Projektledare/Fronted)
+- @andi49 🚩 (Projektledare/Fronted)
 - Charlie (UX/Desig)
 - Isak (API/Frontend)
 - David (Frontend)
@@ -133,6 +133,8 @@ Notering: Footer visar sociala ikoner visuellt, men de är för närvarande inte
 - **forum.html**: `theme.css` + `style.css` + `mailbox.css`
 - **jedi.html / Sith.html**: `theme.css` + `page-shell.css` + `jedi.css`
 - **character-of-the-day.html**: `theme.css` + `character-of-the-day.css`
+- **ships.html**: `style.css` + `theme.css` + `lightsaber.css` + `page-shell.css`
+- **species.html**: `style.css` + `theme.css` + `lightsaber.css` + `page-shell.css`
 
 ---
 
