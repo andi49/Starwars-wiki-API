@@ -57,10 +57,10 @@ fetch(dataBankUrl)
     .catch(err => console.error("Det blev fel:", err));
 
 
-export const renderSith = async (sith) => {
+ const renderSith = async (sith) => {
 
     sith.forEach(s => {
-        if (s.name === "Anakin Skywalker") return;
+      
         const charDiv = document.createElement('div')
         const charImgEl = document.createElement('img')
         const charNameEl = document.createElement('h1')
