@@ -14,6 +14,17 @@
   --nav-jedi: #92ff8c;
   --nav-sith: #ff8f8f;
   --nav-character: #ffbe5c;
+  
+  /* Lightsaber och tema färger - Sith (default) */
+  --saber-color: #BC1E22;
+  --saber-gradient-start: #BC1E22;
+  --saber-gradient-mid: #8f161a;
+  --saber-gradient-end: #BC1E22;
+  --saber-glow: #BC1E22;
+  --theme-primary: #e4575a;
+  --theme-accent: #BC1E22;
+  --theme-surface-border: rgba(188, 30, 34, 0.5);
+  --theme-surface-glow: rgba(188, 30, 34, 0.32);
 }
 
 * {
@@ -36,7 +47,7 @@ body {
   position: relative;
   background:
     radial-gradient(1200px 700px at 10% 10%, rgba(9, 52, 117, 0.35), transparent),
-    radial-gradient(900px 500px at 90% 90%, rgba(255, 153, 0, 0.2), transparent),
+    radial-gradient(900px 500px at 90% 90%, rgba(188, 30, 34, 0.22), transparent),
     #04070d;
   background-attachment: fixed;
 }
@@ -193,65 +204,48 @@ footer,
   transform: translateY(-2px);
 }
 
-.about:hover {
-  border-color: rgba(131, 169, 255, 0.7);
-  box-shadow: 0 0 18px rgba(131, 169, 255, 0.35);
+/* Tema-baserad hover: Sith = röd, Jedi = grön */
+body.sith .site-nav a:hover,
+body.sith .nav-links a:hover {
+  border-color: rgba(188, 30, 34, 0.82);
+  box-shadow: 0 0 18px rgba(188, 30, 34, 0.42);
 }
 
-.forum:hover {
-  border-color: rgba(219, 135, 255, 0.7);
-  box-shadow: 0 0 18px rgba(219, 135, 255, 0.35);
-}
-
-.wiki:hover {
-  border-color: rgba(255, 234, 134, 0.75);
-  box-shadow: 0 0 18px rgba(255, 234, 134, 0.35);
-}
-
-.jedi:hover {
-  border-color: rgba(146, 255, 140, 0.75);
-  box-shadow: 0 0 18px rgba(146, 255, 140, 0.35);
-}
-
-.sith:hover {
-  border-color: rgba(255, 143, 143, 0.75);
-  box-shadow: 0 0 18px rgba(255, 143, 143, 0.35);
-}
-
-.character:hover {
-  border-color: rgba(255, 190, 92, 0.75);
-  box-shadow: 0 0 18px rgba(255, 190, 92, 0.35);
+body.jedi .site-nav a:hover,
+body.jedi .nav-links a:hover {
+  border-color: rgba(36, 206, 36, 0.8);
+  box-shadow: 0 0 18px rgba(36, 206, 36, 0.38);
 }
 
 .site-nav .character.active {
-  border-color: rgba(255, 210, 77, 0.55);
-  box-shadow: 0 0 22px rgba(255, 174, 0, 0.26);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 .site-nav .about.active {
-  border-color: rgba(131, 169, 255, 0.7);
-  box-shadow: 0 0 18px rgba(131, 169, 255, 0.35);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 .site-nav .forum.active {
-  border-color: rgba(219, 135, 255, 0.7);
-  box-shadow: 0 0 18px rgba(219, 135, 255, 0.35);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 
 .site-nav .wiki.active {
-  border-color: rgba(255, 234, 134, 0.75);
-  box-shadow: 0 0 18px rgba(255, 234, 134, 0.35);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 .site-nav .jedi.active {
-  border-color: rgba(146, 255, 140, 0.75);
-  box-shadow: 0 0 18px rgba(146, 255, 140, 0.35);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 .site-nav .sith.active {
-  border-color: rgba(255, 143, 143, 0.75);
-  box-shadow: 0 0 18px rgba(255, 143, 143, 0.35);
+  border-color: rgba(255, 234, 134, 0.88);
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38);
 }
 
 @keyframes glowing {
@@ -371,136 +365,188 @@ footer {
    LIGHT MODE
 ========================= */
 
-body.lightmode {
-  color: #111827;
+/* Jedi Mode */
+body.jedi {
+  color: #eaf4ff;
   background:
-    radial-gradient(1200px 700px at 10% 10%, rgba(46, 103, 248, 0.18), transparent),
-    radial-gradient(900px 500px at 90% 90%, rgba(255, 208, 77, 0.16), transparent),
-    #f4f6fb;
+    radial-gradient(1200px 700px at 10% 10%, rgba(9, 52, 117, 0.35), transparent),
+    radial-gradient(900px 500px at 90% 90%, rgba(36, 206, 36, 0.2), transparent),
+    #04070d;
   background-attachment: fixed;
+  
+  /* Lightsaber färger - Jedi */
+  --saber-color: #24CE24;
+  --saber-gradient-start: #24CE24;
+  --saber-gradient-mid: #1FB11F;
+  --saber-gradient-end: #24CE24;
+  --saber-glow: #00FF28;
+  --theme-primary: #92ff8c;
+  --theme-accent: #24CE24;
+  --theme-surface-border: rgba(36, 206, 36, 0.5);
+  --theme-surface-glow: rgba(36, 206, 36, 0.32);
 }
 
-body.lightmode .noise {
-  opacity: 0.04;
+body.jedi .noise {
+  opacity: 0.12;
 }
 
-body.lightmode .star {
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 8px rgba(46, 103, 248, 0.18);
+body.jedi .star {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
 }
 
-/* Navbar */
-body.lightmode .site-nav a,
-body.lightmode .nav-links a {
-  color: #111827;
-  border: 1px solid rgba(17, 24, 39, 0.12);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+/* Jedi mode keeps the same dark nav/footer surfaces */
+body.jedi .site-nav a,
+body.jedi .nav-links a {
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 15, 30, 0.68);
+  box-shadow: none;
 }
 
-body.lightmode .site-nav a:hover,
-body.lightmode .nav-links a:hover {
+body.jedi .site-nav a:hover,
+body.jedi .nav-links a:hover {
   transform: translateY(-2px);
 }
 
 /* Mobilmeny */
 @media (max-width: 800px) {
-  body.lightmode .site-nav.active {
+  body.jedi .site-nav.active {
     background:
-      radial-gradient(1200px 700px at 10% 10%, rgba(46, 103, 248, 0.12), transparent),
-      radial-gradient(900px 500px at 90% 90%, rgba(255, 208, 77, 0.12), transparent),
-      #f4f6fb;
-    border: 1px solid rgba(17, 24, 39, 0.08);
+      radial-gradient(1200px 700px at 10% 10%, rgba(9, 52, 117, 0.35), transparent),
+      radial-gradient(900px 500px at 90% 90%, rgba(36, 206, 36, 0.2), transparent),
+      #04070d;
+    border: 1px solid rgba(36, 206, 36, 0.35);
     border-radius: 14px;
-    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
   }
 }
 
 /* Footer */
-body.lightmode .footerWrapper,
-body.lightmode footer {
-  border: 1px solid rgba(46, 103, 248, 0.18);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 247, 252, 0.92));
+body.jedi .footerWrapper,
+body.jedi footer {
+  border: 1px solid rgba(36, 206, 36, 0.35);
+  background: linear-gradient(180deg, rgba(7, 16, 29, 0.88), rgba(5, 12, 22, 0.82));
   box-shadow:
-    0 10px 28px rgba(17, 24, 39, 0.08),
-    0 0 18px rgba(46, 103, 248, 0.08);
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(36, 206, 36, 0.2);
 }
 
-body.lightmode .footerMeta {
-  color: #4b5563;
+body.jedi .footerMeta {
+  color: var(--muted);
 }
 
-body.lightmode .socialLinkWrapper li {
-  border: 1px solid rgba(17, 24, 39, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+body.jedi .socialLinkWrapper li {
+  border: 1px solid rgba(36, 206, 36, 0.2);
+  background: rgba(36, 206, 36, 0.1);
 }
 
-body.lightmode .socialLinkWrapper li:hover {
-  border-color: rgba(46, 103, 248, 0.4);
-  box-shadow: 0 0 14px rgba(46, 103, 248, 0.16);
+body.jedi .socialLinkWrapper li:hover {
+  border-color: rgba(36, 206, 36, 0.6);
+  box-shadow: 0 0 14px rgba(36, 206, 36, 0.3);
 }
 
-/* Länkar i light mode behåller sina temafärger */
-body.lightmode .about { color: var(--nav-about); }
-body.lightmode .forum { color: var(--nav-forum); }
-body.lightmode .wiki { color: #b68a00; }
-body.lightmode .jedi { color: #159947; }
-body.lightmode .sith { color: #d14949; }
-body.lightmode .character { color: #d98200; }
+/* Längkar i Jedi mode behåller sina temafärger */
+body.jedi .about { color: var(--nav-about); }
+body.jedi .forum { color: var(--nav-forum); }
+body.jedi .wiki { color: var(--nav-wiki); }
+body.jedi .jedi { color: #24CE24; }
+body.jedi .sith { color: var(--nav-sith); }
+body.jedi .character { color: var(--nav-character); }
 
-/* Active states i light mode */
-body.lightmode .site-nav .about.active {
-  border-color: rgba(131, 169, 255, 0.65);
-  box-shadow: 0 0 14px rgba(131, 169, 255, 0.2);
+/* Active tab is always yellow in both Sith and Jedi */
+.site-nav a.active,
+.nav-links a.active {
+  border-color: rgba(255, 234, 134, 0.88) !important;
+  box-shadow: 0 0 20px rgba(255, 234, 134, 0.38) !important;
 }
 
-body.lightmode .site-nav .forum.active {
-  border-color: rgba(219, 135, 255, 0.65);
-  box-shadow: 0 0 14px rgba(219, 135, 255, 0.2);
+/* Theme glow for larger cards across pages (except homepage left/right cards and About team cards) */
+.shell-card,
+.card,
+.hero-section,
+.intro-message,
+.about-project,
+.our-team,
+.our-goals,
+.contribute {
+  border-color: var(--theme-surface-border);
+  box-shadow:
+    0 22px 42px rgba(0, 0, 0, 0.42),
+    0 0 18px var(--theme-surface-glow);
+  transition: border-color 220ms ease, box-shadow 220ms ease;
 }
 
-body.lightmode .site-nav .wiki.active {
-  border-color: rgba(255, 210, 77, 0.8);
-  box-shadow: 0 0 14px rgba(255, 210, 77, 0.24);
+.shell-card:hover,
+.card:hover,
+.hero-section:hover,
+.intro-message:hover,
+.about-project:hover,
+.our-team:hover,
+.our-goals:hover,
+.contribute:hover {
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.48),
+    0 0 24px var(--theme-surface-glow);
 }
 
-body.lightmode .site-nav .jedi.active {
-  border-color: rgba(146, 255, 140, 0.8);
-  box-shadow: 0 0 14px rgba(146, 255, 140, 0.22);
-}
-
-body.lightmode .site-nav .sith.active {
-  border-color: rgba(255, 143, 143, 0.8);
-  box-shadow: 0 0 14px rgba(255, 143, 143, 0.22);
-}
-
-body.lightmode .site-nav .character.active {
-  border-color: rgba(255, 190, 92, 0.8);
-  box-shadow: 0 0 14px rgba(255, 190, 92, 0.22);
-}
 .theme-toggle-btn {
   text-decoration: none;
   color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 2px solid var(--theme-accent);
   background: rgba(6, 15, 30, 0.68);
-  padding: 0.48rem 0.78rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  transition: all 300ms ease;
   font-family: "Italiana", sans-serif;
   font-weight: 700;
   font-style: normal;
   cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 12000;
+  pointer-events: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .theme-toggle-btn:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 210, 77, 0.75);
-  box-shadow: 0 0 18px rgba(255, 210, 77, 0.35);
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--theme-accent);
+  box-shadow: 
+    0 0 20px var(--saber-glow),
+    inset 0 0 10px rgba(188, 30, 34, 0.2);
+  background: rgba(6, 15, 30, 0.85);
 }
 
-body.lightmode .theme-toggle-btn {
-  color: #111827;
-  border: 1px solid rgba(17, 24, 39, 0.12);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+.theme-toggle-btn:active {
+  transform: translateY(0) scale(1);
+}
+
+body.jedi .theme-toggle-btn {
+  color: var(--ink);
+  border: 2px solid #24CE24;
+  background: rgba(6, 15, 30, 0.68);
+}
+
+body.jedi .theme-toggle-btn:hover {
+  border-color: #24CE24;
+  box-shadow: 
+    0 0 20px rgba(36, 206, 36, 0.6),
+    inset 0 0 10px rgba(36, 206, 36, 0.15);
+}
+
+@media (max-width: 800px) {
+  .theme-toggle-btn {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.42rem 0.72rem;
+    font-size: 0.9rem;
+  }
 }

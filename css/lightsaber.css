@@ -1,48 +1,40 @@
-.saber-anchor{
+/**
+ * Lightsaber styling
+ * Animated lightsaber that grows with scroll and changes colors based on theme
+ */
+
+.saber-anchor {
   position: fixed;
   bottom: 0;
   right: 0;
   width: 5rem;
   height: 15rem;
   z-index: 10;
+  pointer-events: none;
 }
 
-#lightsaber{
+#lightsaber {
   position: absolute;
   bottom: 7rem;
   left: 50%;
   transform: translateX(-50%);
   width: 1rem;
+  height: 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-background: #CE5937;
-/* background: -moz-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
-background: -webkit-linear-gradient(left, #CE5937 0%, #954028 50%, #CE5937 100%);
-background: linear-gradient(to right, #CE5937 0%, #954028 50%, #CE5937 100%); */
+  background: var(--saber-color);
   z-index: 2;
+  pointer-events: auto;
+  transition: height 50ms linear;
 }
-#sithlightsaber{
-  position: absolute;
-  bottom: 7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1rem;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-background: #24CE24;
-background: -moz-linear-gradient(left, #24CE24 0%, #1FB11F 44%, #24CE24 100%);
-background: -webkit-linear-gradient(left, #24CE24 0%, #1FB11F 44%, #24CE24 100%);
-background: linear-gradient(to right, #24CE24 0%, #1FB11F 44%, #24CE24 100%);
-  z-index: 2;
-}
-#saberhandle{
+
+#saberhandle {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 5rem;
   z-index: 1;
+  pointer-events: auto;
 }

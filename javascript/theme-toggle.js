@@ -1,23 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("themeToggle");
-  if (!toggleBtn) return;
+/**
+ * Jedi/Sith Theme Toggle System
+ * Manages switching between Jedi and Sith modes
+ * Persists user preference in localStorage
+ */
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('themeToggle')
+  
+  if (!toggleBtn) {
+    return
+  }
+
+  function updateToggleLabel(theme) {
+    toggleBtn.textContent = theme === 'jedi' ? 'JEDI' : 'SITH'
+  }
+
+  /**
+   * Apply theme to body and save to localStorage
+   * @param {string} theme - Either 'sith' or 'jedi'
+   */
   function applyTheme(theme) {
-    document.body.classList.remove("darkmode", "lightmode");
-    document.body.classList.add(theme);
-    localStorage.setItem("theme", theme);
+    document.body.classList.remove('sith', 'jedi')
+    document.body.classList.add(theme)
+    localStorage.setItem('theme', theme)
+    updateToggleLabel(theme)
   }
 
-  const savedTheme = localStorage.getItem("theme");
+  // Get saved theme from localStorage or use default (Sith)
+  const savedTheme = localStorage.getItem('theme')
 
-  if (savedTheme === "lightmode" || savedTheme === "darkmode") {
-    applyTheme(savedTheme);
+  if (savedTheme === 'jedi' || savedTheme === 'sith') {
+    applyTheme(savedTheme)
   } else {
-    applyTheme("darkmode");
+    applyTheme('sith')
   }
 
-  toggleBtn.addEventListener("click", () => {
-    const isDark = document.body.classList.contains("darkmode");
-    applyTheme(isDark ? "lightmode" : "darkmode");
-  });
-});
+  // Toggle theme on button click
+  toggleBtn.addEventListener('click', () => {
+    const isJedi = document.body.classList.contains('jedi')
+    const newTheme = isJedi ? 'sith' : 'jedi'
+    applyTheme(newTheme)
+  })
+})
