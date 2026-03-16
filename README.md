@@ -1,12 +1,12 @@
 # 🌌 Starwars Wiki
 
-En responsiv webbplats som visar information om Star Wars-karaktärer genom att hämta data från ett externt API. Projektet är gjort som en gruppuppgift med fokus på samarbete, versionshantering och modern webbutveckling.
+En responsiv webbplats som visar information om Star Wars-karaktärer, fordon och arter genom att hämta data från ett externt API. Projektet är gjort som en gruppuppgift med fokus på samarbete, versionshantering och webbutveckling.
 
 ---
 
 # 📖 Om projektet
 
-Starwars Wiki är en webbsida där användare kan utforska olika karaktärer från Star Wars-universumet. Informationen hämtas dynamiskt från ett API och presenteras på ett enkelt och användarvänligt sätt.
+Starwars Wiki är en webbsida där användare kan utforska olika Jedi & Sith-karaktärer, fordon, skepp och arter från Star Wars-universumet. Informationen hämtas dynamiskt från ett API och presenteras på ett enkelt och användarvänligt sätt.
 
 Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-first** tänk för att fungera bra på både mobil och desktop.
 
