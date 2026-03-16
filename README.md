@@ -60,7 +60,8 @@ Webbplatsen innehåller minst fyra sidor:
 - **Characters** – lista över karaktärer från API  
 - **About Us** – information om projektet  
 - **Contact** – kontaktinformation  
-
+- **Ships and Vechiles** – skäpp och fordon
+- **Species** – art
 ---
 
 # 🎨 Design
