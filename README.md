@@ -19,7 +19,7 @@ Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-fi
 
 ### Gruppmedlemmar
 
-- @andi49 🚩 (Projektledare/Fronted)
+- [andi49](https://github.com/andi49) 🚩 (Projektledare/Fronted)
 - Charlie (UX/Desig)
 - Isak (API/Frontend)
 - David (Frontend)
