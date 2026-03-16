@@ -1,87 +1,176 @@
-# Starwars wiki
-API ABOUT STARWARS
+# 🌌 Starwars Wiki
 
-# Git hjälp
-Liten tutorial på hur vi kommer igång och arbetar med git.
-## Så här skapar vi ett nytt repo
-Antingen kan du göra det via Rider.
-Det går att göra det på Github, där kan du välja att lägga till ignore,readme och liscens.
-Det går att skippa det steget och då får du göra det via terminalen (bash).
-Om repot finns så måste du sedan bjuda in de som ska arbeta på repot i github.
-Sedan kan de klona repot via github och sen i terminalen eller rider klona det till din dator.
-Se till att ni sitter i den mappen ni vill repot ska connectas med.
-Kolla var du är genom commandot ls (du får nu upp en lista på filer och mappar som ligger i mappen) och gå in i den mappen du vill med kommandot cd "directory".
+En responsiv webbplats som visar information om Star Wars-karaktärer genom att hämta data från ett externt API. Projektet är gjort som en gruppuppgift med fokus på samarbete, versionshantering och modern webbutveckling.
 
-## Så här gör vi en ny branch
-git checkout -b fancy_feature (skapar och switchar till en ny branch),
-git branch cool_feature (skapar en ny branch)
-git checkout cool_feature (byter till branch "cool_feature"),
-Glöm inte göra en first commit.
-git add Cool.cs,
-git commit -m "added cool file",
-git push, om du får error så står det vad du ska göra oftast brukar det vara -->
-git push --set-upstream origin cool_feature,
-Döp era features (branches) till feature/"namn" för att underlätta. Detta är praxis!
-Använd git status ofta för att se var du är och hur dina commits ligger till.
-git branch -a (kolla vilka branches som finns).
+---
 
-## Gitignore
-För att göra en ignore manuellt behöver du göra en vanlig fil i repot som heter gitignore.
-Sedan gå in i benjamins dokumentation som heter gitignore på bloggen i artikeln "kom igång med git".
-Kopiera sedan in det template du behöver för ditt projekt. Vi använder C#.
+# 📖 Om projektet
 
-Svåra vägen är att radera filerna med rm -Rf obj och rm -Rf bin.
-Var försiktig med detta kommandot eftersom om du använder det på hela datorn så försvinner dina system filer.
+Starwars Wiki är en webbsida där användare kan utforska olika karaktärer från Star Wars-universumet. Informationen hämtas dynamiskt från ett API och presenteras på ett enkelt och användarvänligt sätt.
 
-terminal:
-touch gitignore (gör fil),
-git add gitignore,
-git commit ....,
-git push ,
-rm -Rf obj,
-rm -Rf bin (raderar filerna lokalt),
-git push.
-Kan finnas något extra steg som behövs. Kolla i dokumentation för att vara säker.
+Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-first** tänk för att fungera bra på både mobil och desktop.
 
-## Lägg till på olika sätt
-git add . (. = current directory),
-git add * (utan gömda filer),
-git add "filename",
-git add Mapp/. (allting i denna mappen),
-git add (hela sökvägen),
-GLÖM INTE att använda "git commit -m "meddelande"" sedan "git push"
-för att det ska läggas till i repository.
+---
 
-## divergent branches
-Glöm inte att läsa dina error messages!
+# 👥 Grupp
 
-Får du error med divergent branches använd:
+**Grupp:** Grupp 3  
+**Teamnamn:** Starwars Wiki  
 
-git config pull.rebase false
+### Gruppmedlemmar
 
-Testa sedan git pull, sedan fixa de ändringar du skulle göra och använd git add och git commit sedan git push. Får du merge problem igen så kan det vara bra att prata med teamet.
+- Andreas Pavel 🚩 (Projektledare)
+- Charlie
+- Isak
+- David
+- Syed Muhammad
+- Deaa
+- Salma
 
-## Merge strategy
-git pull (kolla om du är up to date),
+---
 
-git checkout "branch" ,
+# 🔗 API
 
-git pull (kolla om du är up to date),
+Projektet använder ett Star Wars API för att hämta karaktärsdata.
 
-git merge main (för att mergea in main i din branch),
+API endpoint:
 
-kolla med git status
+https://starwars-databank-server.vercel.app/api/v1/characters?page=2&limit=total
 
-commit changes and push changes,
+API:t används för att hämta information om olika karaktärer i Star Wars-universumet.
 
-git checkout main,
+---
 
-git merge "branch" (för att mergea din branch med main),
+# ⚙️ Funktioner
 
-# Merge conflicts communication
+Webbplatsen innehåller bland annat:
 
-Kommunicera med projektledare eller mellan de som har mergeconflikt i laget och utvärdera vad som behövs ändras / behållas. 
+- Visa Star Wars-karaktärer från API
+- Sök efter karaktärer
+- Navigera mellan olika sidor
+- Responsiv design för mobil och desktop
+- Modern layout inspirerad av Star Wars
 
+---
+
+# 📄 Sidor
+
+Webbplatsen innehåller minst fyra sidor:
+
+- **Home** – introduktion till Starwars Wiki  
+- **Characters** – lista över karaktärer från API  
+- **About Us** – information om projektet  
+- **Contact** – kontaktinformation  
+
+---
+
+# 🎨 Design
+
+Designen är inspirerad av Star Wars-universumet och rymdtemat.
+
+### Designval
+
+Vi valde ett **mörkt färgtema** eftersom Star Wars ofta förknippas med rymden och mörka miljöer.
+
+Vi använder **gula accenter inspirerade av Star Wars-logotypen** för att skapa en tydlig koppling till temat.
+
+Layouten är **mobile-first**, vilket innebär att designen först anpassats för mobil och sedan för större skärmar.
+
+Fokus har legat på:
+
+- enkel navigation  
+- tydlig layout  
+- responsiv design  
+- bra användarupplevelse  
+
+---
+
+# 🛠 Tekniker
+
+Projektet är byggt med:
+
+- HTML
+- CSS
+- JavaScript
+- Fetch API
+- Git & GitHub
+
+---
+
+# 🤝 Samarbete och GitHub
+
+Vi har använt **GitHub** för versionshantering och samarbete i gruppen.
+
+Arbetet organiserades genom:
+
+- branches för olika features  
+- regelbundna commits  
+- merge via GitHub  
+- kommunikation i gruppen vid merge conflicts  
+
+På detta sätt kunde alla gruppmedlemmar bidra till projektet samtidigt.
+
+---
+
+# 🚀 Installation
+
+För att köra projektet lokalt:
+
+1. Klona repot
+
+git clone https://github.com/andi49/Starwars-wiki.git
+
+2. Gå in i projektmappen
+
+cd Starwars-wiki
+
+3. Öppna `index.html` i en webbläsare  
+eller använd **Live Server** i VS Code.
+
+---
+
+# 🖼 Skisser och mockups
+
+Skisser och wireframes för webbplatsens design finns i repot, till exempel i:
+
+/img
+
+eller
+
+/design
+
+---
+
+# 📊 Rapport om samarbete
+
+I projektet arbetade vi tillsammans i en grupp där varje medlem hade ansvar för olika delar av webbplatsen, till exempel design, API-integration och struktur.
+
+Vi använde GitHub för versionshantering och skapade branches för olika funktioner. Genom commits och pull requests kunde vi enkelt se förändringar och samarbeta utan att skriva över varandras kod.
+
+Kommunikation var viktigt under arbetets gång, särskilt när vi behövde lösa merge conflicts eller diskutera designval.
+
+---
+
+# 🔗 Länkar
+
+**GitHub Repository**
+
+https://github.com/andi49/Starwars-wiki
+
+**GitHub Pages**
+
+(lägg till länk här om sidan hostas)
+
+---
+
+# ⭐ Framtida förbättringar
+
+Möjliga förbättringar för projektet:
+
+- fler API-funktioner
+- förbättrad sökfunktion
+- fler karaktärsdetaljer
+- fler animationer och visuella effekter
 
 
 
