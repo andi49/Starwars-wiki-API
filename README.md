@@ -20,10 +20,10 @@ Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-fi
 ### Gruppmedlemmar
 
 - [andi49](https://github.com/andi49) 🚩 (Projektledare/Fronted)
-- Charlie (UX/Desig)
-- Isak (API/Frontend)
-- David (Frontend)
-- Salma (Frontend)
+- [Charlie](https://github.com/Kingtutz) (Frontend)
+- [Isak](https://github.com/Isakgit24) (API/Frontend)
+- [David](https://github.com/Davve420) (UX/Desig)
+- [Salma](https://github.com/salmaharastani) (Frontend)
 ---
 
 # 🔗 API
@@ -42,7 +42,13 @@ API:t används för att hämta information om olika karaktärer i Star Wars-univ
 
 Webbplatsen innehåller bland annat:
 
-- Visa Star Wars-karaktärer från API
+- Visa Star Wars-data från API:
+- Karaktärer
+  - Jedi
+  - Sith
+- Fordon
+- Rymdskepp
+- Species
 - Navigera mellan olika sidor
 - Responsiv design för mobil och desktop
 - Modern layout inspirerad av Star Wars
