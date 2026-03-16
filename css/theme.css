@@ -342,9 +342,6 @@ footer {
   footer {
     padding: 0.9rem;
   }
-
-  
-
 }
 
 .fa-tiktok{
@@ -369,7 +366,8 @@ footer {
 ::view-transition-group(*):not(site-header){
   animation: normal;
   animation-duration: 1s;
-}/* =========================
+}
+/* =========================
    LIGHT MODE
 ========================= */
 
