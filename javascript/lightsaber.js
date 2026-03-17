@@ -4,6 +4,37 @@
  * and changes color based on the active theme (Sith/Jedi)
  */
 
+function getImageBasePath () {
+  return window.location.pathname.toLowerCase().includes('/src/')
+    ? '../img/'
+    : 'img/'
+}
+
+function resolveTheme () {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme === 'jedi' || savedTheme === 'sith') {
+    return savedTheme
+  }
+
+  return document.body.classList.contains('jedi') ? 'jedi' : 'sith'
+}
+
+function getSaberHandleSrc (theme) {
+  const imageBasePath = getImageBasePath()
+  return theme === 'jedi'
+    ? `${imageBasePath}saberhanld.png`
+    : `${imageBasePath}sithlightsaber.png`
+}
+
+function updateSaberHandleImage (theme = resolveTheme()) {
+  const handle = document.getElementById('saberhandle')
+  if (!handle) {
+    return
+  }
+
+  handle.src = getSaberHandleSrc(theme)
+}
+
 // Load lightsaber handle image based on theme
 function loadSaberHandle () {
   const handleDiv =
@@ -14,19 +45,11 @@ function loadSaberHandle () {
     return
   }
 
-  const imageBasePath = window.location.pathname.toLowerCase().includes('/src/')
-    ? '../img/'
-    : 'img/'
-
   const addHandle = document.createElement('img')
   addHandle.id = 'saberhandle'
   addHandle.alt = 'Lightsaber handle'
 
-  // Change handle based on theme
-  const isJedi = document.body.classList.contains('jedi')
-  addHandle.src = isJedi
-    ? `${imageBasePath}saberhanld.png`
-    : `${imageBasePath}sithlightsaber.png`
+  addHandle.src = getSaberHandleSrc(resolveTheme())
 
   handleDiv.prepend(addHandle)
 }
@@ -82,6 +105,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   loadSaberHandle()
+  updateSaberHandleImage()
+
+  const themeObserver = new MutationObserver(() => {
+    updateSaberHandleImage()
+    updateSaberColors()
+  })
+  themeObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  })
 
   const lightsaber = document.getElementById('lightsaber')
   if (!lightsaber) {
@@ -139,36 +172,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll event listener
   window.addEventListener('scroll', updateLightsaberHeight)
-})
-
-// Update theme colors when theme changes (listen for theme-toggle)
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle')
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      // Update handle image after theme change
-      const handleDiv =
-        document.getElementById('saberdiv') ||
-        document.querySelector('.saber-anchor')
-      const handle = handleDiv?.querySelector('#saberhandle')
-
-      if (handle) {
-        const isJedi = document.body.classList.contains('jedi')
-        const imageBasePath = window.location.pathname
-          .toLowerCase()
-          .includes('/src/')
-          ? '../img/'
-          : 'img/'
-
-        // Handle changes theme when clicked, so we check inverted state
-        handle.src = isJedi
-          ? `${imageBasePath}sithlightsaber.png`
-          : `${imageBasePath}saberhanld.png`
-      }
-
-      // Update colors
-      setTimeout(() => updateSaberColors(), 10)
-    })
-  }
 })
