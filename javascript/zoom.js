@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
   if (imageWidth > 0 && imageHeight > 0) {
     const scaleX = containerWidth / imageWidth;
     const scaleY = containerHeight / imageHeight;
-    initialScale = Math.min(scaleX, scaleY);
+    initialScale = Math.max(scaleX, scaleY);
     currentScale = initialScale;
     updateTransform();
   }

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/mailbox.css" />
     <link rel="stylesheet" href="../css/galaxymap.css" />
     <script src="../javascript/theme-toggle.js" defer></script>
-    <script src="../javascript/zoom.js" defer></script>
+    <script src="../javascript/popup.js" defer></script>
 
     <title>Galaxy Map - Star Wars Wiki</title>
   </head>
@@ -46,14 +46,24 @@
       </header>
 
       <main>
-        <div class="map-controls">
-          <button onclick="resetZoom()">Reset</button>
-        </div>
+        <div class="galaxymap-section">
+          <h1 class="galaxymap-title">Star Wars Galaxy Map</h1>
+          
+          <div class="image-container">
+            <img src="../img/star_wars_galaxy_map_4000x4000_20251009_3c4d0e08.jpeg" alt="Galaxy Map" class="galaxymap" onclick="openPopup()">
+          </div>
 
-        <div class="image-container" id="map-container">
-          <img id="map-image" src="../img/star_wars_galaxy_map_4000x4000_20251009_3c4d0e08.jpeg" alt="Galaxy Map" class="galaxymap">
+          <div class="map-controls">
+            <button onclick="openPopup()" class="fullscreen-btn">Click to View Fullscreen</button>
+          </div>
         </div>
       </main>
+
+      <!-- Popup Modal -->
+      <div id="imagePopup" class="popup-modal">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <img src="../img/star_wars_galaxy_map_4000x4000_20251009_3c4d0e08.jpeg" alt="Galaxy Map" class="popup-image">
+      </div>
 
       <footer class="footerWrapper">
         <ul class="internalLinkWrapper">

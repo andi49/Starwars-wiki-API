@@ -60,3 +60,33 @@ function showPopup(message, type = "default") {
         }, 4000);
     }
 }
+
+// Image Popup Functions for Galaxy Map
+function openPopup() {
+  const imagePopup = document.getElementById('imagePopup');
+  imagePopup.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+}
+
+function closePopup() {
+  const imagePopup = document.getElementById('imagePopup');
+  imagePopup.classList.remove('show');
+  document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Close image popup when clicking outside the image
+if (document.getElementById('imagePopup')) {
+  window.addEventListener('click', (e) => {
+    const imagePopup = document.getElementById('imagePopup');
+    if (e.target === imagePopup) {
+      closePopup();
+    }
+  });
+
+  // Close image popup with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closePopup();
+    }
+  });
+}
