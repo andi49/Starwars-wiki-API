@@ -6,12 +6,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('themeToggle')
-  
+
   if (!toggleBtn) {
     return
   }
 
-  function updateToggleLabel(theme) {
+  function updateToggleLabel (theme) {
     toggleBtn.textContent = theme === 'jedi' ? 'JEDI' : 'SITH'
   }
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Apply theme to body and save to localStorage
    * @param {string} theme - Either 'sith' or 'jedi'
    */
-  function applyTheme(theme) {
+  function applyTheme (theme) {
     document.body.classList.remove('sith', 'jedi')
     document.body.classList.add(theme)
     localStorage.setItem('theme', theme)
